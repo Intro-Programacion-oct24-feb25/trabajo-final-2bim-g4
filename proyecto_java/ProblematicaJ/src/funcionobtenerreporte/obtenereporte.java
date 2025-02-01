@@ -4,23 +4,19 @@
  */
 package funcionobtenerreporte;
 
-import funcionatletismo.*;
-
 /**
  *
  * @author carlo
  */
 public class obtenereporte {
+
     public static String obtenerReporte(String[] nombres, int[] actividades) {
-        String reporte2 = "";
+        String reporte = "Las actividades ingresadas son: \n";
 
         for (int i = 0; i < 6; i++) {
-            reporte2 +=i+1+". "+"Número de participaciones de " + nombres[i] + ": " + 
-                    actividades[i] + "\n";
+            reporte += i + 1 + ". " + "Número de participantes de " + nombres[i] + ": "
+                    + actividades[i] + "\n";
         }
-
-        reporte2 = "Las actividades ingresadas son:\n" + reporte2;
-
-        return reporte2;
+        return reporte;
     }
 }

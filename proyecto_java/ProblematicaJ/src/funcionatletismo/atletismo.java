@@ -11,41 +11,36 @@ import java.util.Scanner;
  * @author carlo
  */
 public class atletismo {
-    public static String registrarParticipanteAtletismo(String reporte){
-           Scanner entrada = new Scanner(System.in);
-           String posicion = "";
-           System.out.println("Ingrese nombre del participante");
-           String nombre = entrada.nextLine();
-           System.out.println("Ingrese la edad del participante");
-           int edad = entrada.nextInt();
-           System.out.println("Ingrese la especialidad: Carreras (1), Salto (2),"
-                   + "Lanzamiento (3)");
-           int opcion = entrada.nextInt();
-            switch (opcion) {
-                case 1:
-                    posicion = "principiante";
-                    break;
-                case 2:
-                    posicion = "intermedio";
-                    break;
-                    case 3:
-                    posicion = "avanzado";
-                    break;
-                    default:
-                        System.out.println("Número fuera de rango");
-                    }
-            entrada.nextLine();
-           System.out.println("Ingrese la ciudad del participante");
-           String ciudad = entrada.nextLine();
-           System.out.println("Ingrese récord personal");
-           double equipo = entrada.nextDouble();
-           
-           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
-                   + "Edad del participante: %d\n"
-                   + "Especialidad del participante: %s\n"
-                   +"Ciudad del participante: %s\n"
-           + "Récord personal: %s\n",reporte, nombre,edad,posicion,ciudad,equipo);
-           return reporte;
 
-} 
+    public static String registrarParticipanteAtletismo() {
+        Scanner entrada = new Scanner(System.in);
+        String nombre;
+        int edad;
+        String especialidad;
+        String ciudad;
+        String record;
+        String reporte = "";
+
+        System.out.println("Ingrese nombre del participante");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese la edad del participante");
+        edad = entrada.nextInt();
+        entrada.nextLine();
+        System.out.println("Ingrese la especialidad: (Carreras, Salto,"
+                + "Lanzamiento)");
+        especialidad = entrada.nextLine();
+        System.out.println("Ingrese la ciudad del participante");
+        ciudad = entrada.nextLine();
+        System.out.println("Ingrese récord personal");
+        record = entrada.nextLine();
+
+        reporte = String.format("%s\n" + "Nombre del participante: %s\n"
+                + "Edad del participante: %d\n"
+                + "Especialidad del participante: %s\n"
+                + "Ciudad del participante: %s\n"
+                + "Récord personal: %s\n", reporte, nombre, edad, especialidad, 
+                                           ciudad,record);
+        return reporte;
+
+    }
 }
