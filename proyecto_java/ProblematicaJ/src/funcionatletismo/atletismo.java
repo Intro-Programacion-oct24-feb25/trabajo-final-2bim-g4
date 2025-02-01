@@ -2,25 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package problematicaj;
+package funcionatletismo;
 
 import java.util.Scanner;
 
 /**
  *
- * @author utpl
+ * @author carlo
  */
-public class Procedimiento2 {
-    public static void registrarParticipanteNatacion(){
+public class atletismo {
+    public static String registrarParticipanteAtletismo(String reporte){
            Scanner entrada = new Scanner(System.in);
            String posicion = "";
            System.out.println("Ingrese nombre del participante");
            String nombre = entrada.nextLine();
            System.out.println("Ingrese la edad del participante");
            int edad = entrada.nextInt();
-           entrada.nextLine();
-           System.out.println("Ingrese el nivel: Principiante (1), Intermedio (2),"
-                   + "Avanzado (3)");
+           System.out.println("Ingrese la especialidad: Carreras (1), Salto (2),"
+                   + "Lanzamiento (3)");
            int opcion = entrada.nextInt();
             switch (opcion) {
                 case 1:
@@ -38,15 +37,15 @@ public class Procedimiento2 {
             entrada.nextLine();
            System.out.println("Ingrese la ciudad del participante");
            String ciudad = entrada.nextLine();
-           System.out.println("Ingrese estilo favorito");
-           String equipo = entrada.nextLine();
+           System.out.println("Ingrese récord personal");
+           double equipo = entrada.nextDouble();
            
-           System.out.printf("Nombre del participante: %s\n"
+           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
                    + "Edad del participante: %d\n"
-                   + "Nivel del participante: %s\n"
+                   + "Especialidad del participante: %s\n"
                    +"Ciudad del participante: %s\n"
-           + "Estilo favorito: %s\n", nombre,edad,posicion,ciudad,equipo);
+           + "Récord personal: %s\n",reporte, nombre,edad,posicion,ciudad,equipo);
+           return reporte;
 
 } 
-    
 }

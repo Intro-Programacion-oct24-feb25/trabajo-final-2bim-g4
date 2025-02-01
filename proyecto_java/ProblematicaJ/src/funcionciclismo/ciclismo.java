@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package problematicaj;
+package funcionciclismo;
 
 import java.util.Scanner;
 
 /**
  *
- * @author utpl
+ * @author carlo
  */
-public class Procedimiento5 {
-    public static void registrarParticipanteCiclismo(){
+public class ciclismo {
+    public static String registrarParticipanteCiclismo(String reporte){
            Scanner entrada = new Scanner(System.in);
            String posicion ="";
            System.out.println("Ingrese nombre del participante");
@@ -42,13 +42,12 @@ public class Procedimiento5 {
            System.out.println("Ingrese marca de bicicleta preferida");
            String equipo = entrada.nextLine();
            
-           System.out.printf("Nombre del participante: %s\n"
+           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
                    + "Edad del participante: %d\n"
                    + "Tipo de ciclismo: %s\n"
                    +"Ciudad del participante: %s\n"
-           + "marca de bicicleta favorita: %s\n", nombre,edad,posicion,ciudad,
+           + "marca de bicicleta favorita: %s\n",reporte, nombre,edad,posicion,ciudad,
            equipo);
-
-} 
-    
+           return reporte;
+}
 }

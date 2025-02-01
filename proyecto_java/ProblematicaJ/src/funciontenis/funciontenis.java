@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package problematicaj;
+package funciontenis;
 
 import java.util.Scanner;
 
 /**
  *
- * @author utpl
+ * @author carlo
  */
-public class Procedimiento6 {
-    public static void registrarParticipanteTenis(){
+public class funciontenis {
+  public static String registrarParticipanteTenis(String reporte){
            Scanner entrada = new Scanner(System.in);
            String posicion= "";
            String posicion2= "";
@@ -52,12 +52,11 @@ public class Procedimiento6 {
                         System.out.println("Número fuera de rango");
                         }
            
-           System.out.printf("Nombre del participante: %s\n"
+           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
                    + "Edad del participante: %d\n"
                    + "Nivel del participante: %s\n"
                    +"Ciudad del participante: %s\n"
-           + "Mano hábil %s\n", nombre,edad,posicion,ciudad,posicion2);
-
-} 
-    
+           + "Mano hábil: %s\n",reporte, nombre,edad,posicion,ciudad,posicion2);
+           return reporte;
+}  
 }

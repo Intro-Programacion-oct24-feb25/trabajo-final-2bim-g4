@@ -5,20 +5,23 @@
 package problematicaj;
 
 import java.util.Scanner;
-import static problematicaj.Procedimiento1.registrarParticipanteFutbol;
-import static problematicaj.Procedimiento2.registrarParticipanteNatacion;
-import static problematicaj.Procedimiento3.registrarParticipanteAtletismo;
-import static problematicaj.Procedimiento4.registrarParticipanteBasquetball;
-import static problematicaj.Procedimiento5.registrarParticipanteCiclismo;
-import static problematicaj.Procedimiento6.registrarParticipanteTenis;
-import static problematicaj.Procedimiento7.registrarParticipanteYoga;
+import funcionatletismo.atletismo;
+import funcionbasquetbol.basquetbol;
+import funcionciclismo.ciclismo;
+import funcionfutbol.futbol;
+import funcionnatacion.natacion;
+import funciontenis.funciontenis;
+import funcionyoga.funcionyoga;
+import funcionobtenerinformacion.obtenerinformacion;
+import funcionobtenerreporte.obtenereporte;
+import funcionobtenersuma.obtenersuma;
 
 /**
  *
  * @author utpl
  */
 public class ProblematicaJ {
-
+public static String reporte="Reporte:\n";
     /**
      * @param args the command line arguments
      */
@@ -37,36 +40,36 @@ public class ProblematicaJ {
                     + "Tenis(6)\nYoga(7)\n");
             indice = entrada.nextInt();
             if (indice == 1) {
-                registrarParticipanteFutbol();
+               reporte = futbol.registrarParticipanteFutbol(reporte);
                 arreglo[0] = arreglo[0] + 1;
 
             } else {
                 if (indice == 2) {
-                    registrarParticipanteNatacion();
+                  reporte = natacion.registrarParticipanteNatacion(reporte);
                     arreglo[1] = arreglo[1] + 1;
 
                 } else {
                     if (indice == 3) {
-                        registrarParticipanteAtletismo();
+                       reporte = reporte =atletismo.registrarParticipanteAtletismo(reporte);
                         arreglo[2] = arreglo[2] + 1;
 
                     } else {
                         if (indice == 4) {
-                            registrarParticipanteBasquetball();
+                            reporte =basquetbol.registrarParticipanteBasquetball(reporte);
                             arreglo[3] = arreglo[3] + 1;
                         } else {
                             if (indice == 5) {
-                                registrarParticipanteCiclismo();
+                                reporte =ciclismo.registrarParticipanteCiclismo(reporte);
                                 arreglo[4] = arreglo[4] + 1;
 
                             } else {
                                 if (indice == 6) {
-                                    registrarParticipanteTenis();
+                                   reporte = funciontenis.registrarParticipanteTenis(reporte);
                                     arreglo[5] = arreglo[5] + 1;
 
                                 } else {
                                     if (indice == 7) {
-                                        registrarParticipanteYoga();
+                                      reporte =  funcionyoga.registrarParticipanteYoga(reporte);
                                         arreglo[6] = arreglo[6] + 1;
 
                                     } else {
@@ -91,49 +94,17 @@ public class ProblematicaJ {
             }
 
         }
-        sumatotal= obtenerSuma(arreglo);
-        mensajeActividades = obtenerInformacion(sumatotal);
+        sumatotal= obtenersuma.obtenerSuma(arreglo);
+        mensajeActividades = obtenerinformacion.obtenerInformacion(sumatotal);
         String[] nombres = {"Futbol", "Natacion", "Atletismo", "Basquetball",
             "Ciclismo", "Tenis", "Yoga"};
-        cadenaReporte = obtenerReporte(nombres, arreglo);
+        cadenaReporte = obtenereporte.obtenerReporte(nombres, arreglo);
+        System.out.printf("%s\n", reporte);
         System.out.printf("%s\n", mensajeActividades);
         System.out.printf("%s\n", cadenaReporte);
 
     }
-    public static int obtenerSuma(int[] arreglo) {
-        int suma = 0;
-        for (int i = 0; i < 6; i++) {
-            suma += arreglo[i];
-        }
-        return suma;
-    }
-    public static String obtenerInformacion(int suma) {
-        String mensaje = "";
-
-        if (suma == 0) {
-            mensaje = "¡Mal compañero, debes mejorar!";
-        } else if (suma >= 1 && suma <= 5) {
-            mensaje = "Poca participación en el club, hay que mejorar.";
-        } else if (suma >= 6 && suma <= 15) {
-            mensaje = "Buena participación, ¡sigue así!";
-        } else {
-            mensaje = "¡Excelente compañero del club!";
-        }
-
-        return mensaje;
-    }
-    public static String obtenerReporte(String[] nombres, int[] actividades) {
-        String reporte = "";
-
-        for (int i = 0; i < 6; i++) {
-            reporte +=i+1+". "+"Número de participaciones de " + nombres[i] + ": " + 
-                    actividades[i] + "\n";
-        }
-
-        reporte = "Las actividades ingresadas son:\n" + reporte;
-
-        return reporte;
-    }
+     
 
 }
 

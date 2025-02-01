@@ -2,24 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package problematicaj;
+package funcionyoga;
 
 import java.util.Scanner;
 
 /**
  *
- * @author utpl
+ * @author carlo
  */
-public class Procedimiento3 {
-    public static void registrarParticipanteAtletismo(){
+public class funcionyoga {
+    public static String registrarParticipanteYoga(String reporte){
            Scanner entrada = new Scanner(System.in);
            String posicion = "";
            System.out.println("Ingrese nombre del participante");
            String nombre = entrada.nextLine();
            System.out.println("Ingrese la edad del participante");
            int edad = entrada.nextInt();
-           System.out.println("Ingrese la especialidad: Carreras (1), Salto (2),"
-                   + "Lanzamiento (3)");
+           entrada.nextLine();
+           System.out.println("Ingrese el nivel: Principiante (1), Intermedio (2),"
+                   + "Avanzado (3)");
            int opcion = entrada.nextInt();
             switch (opcion) {
                 case 1:
@@ -37,15 +38,14 @@ public class Procedimiento3 {
             entrada.nextLine();
            System.out.println("Ingrese la ciudad del participante");
            String ciudad = entrada.nextLine();
-           System.out.println("Ingrese récord personal");
-           double equipo = entrada.nextDouble();
+           System.out.println("Ingrese el estilo de yoga favorito");
+           String equipo = entrada.nextLine();
            
-           System.out.printf("Nombre del participante: %s\n"
+           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
                    + "Edad del participante: %d\n"
-                   + "Especialidad del participante: %s\n"
+                   + "Nivel del participante: %s\n"
                    +"Ciudad del participante: %s\n"
-           + "Récord personal: %s\n", nombre,edad,posicion,ciudad,equipo);
-
+           + "Estilo favorito: %s\n",reporte, nombre,edad,posicion,ciudad,equipo);
+           return reporte;
 } 
-    
 }

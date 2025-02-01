@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package problematicaj;
+package funcionnatacion;
 
 import java.util.Scanner;
 
 /**
  *
- * @author utpl
+ * @author carlo
  */
-public class Procedimiento7 {
-    public static void registrarParticipanteYoga(){
+public class natacion {
+    public static String registrarParticipanteNatacion(String reporte){
            Scanner entrada = new Scanner(System.in);
            String posicion = "";
            System.out.println("Ingrese nombre del participante");
@@ -38,15 +38,15 @@ public class Procedimiento7 {
             entrada.nextLine();
            System.out.println("Ingrese la ciudad del participante");
            String ciudad = entrada.nextLine();
-           System.out.println("Ingrese el estilo de yoga favorito");
+           System.out.println("Ingrese estilo favorito");
            String equipo = entrada.nextLine();
            
-           System.out.printf("Nombre del participante: %s\n"
+           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
                    + "Edad del participante: %d\n"
                    + "Nivel del participante: %s\n"
                    +"Ciudad del participante: %s\n"
-           + "Estilo favorito: %s\n", nombre,edad,posicion,ciudad,equipo);
-
+           + "Estilo favorito: %s\n",reporte, nombre,edad,posicion,ciudad,equipo);
+return reporte;
 } 
     
 }
