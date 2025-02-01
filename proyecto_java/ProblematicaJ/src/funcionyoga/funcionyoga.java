@@ -26,7 +26,7 @@ public class funcionyoga {
         System.out.println("Ingrese la edad del participante");
         edad = entrada.nextInt();
         entrada.nextLine();
-        System.out.println("Ingrese el nivel: (Principiante, Intermedio,"
+        System.out.println("Ingrese el nivel: (Principiante, Intermedio, "
                 + "Avanzado)");
         nivel = entrada.nextLine();
         System.out.println("Ingrese la ciudad del participante");
@@ -34,10 +34,10 @@ public class funcionyoga {
         System.out.println("Ingrese el estilo de yoga favorito");
         estilo = entrada.nextLine();
 
-        reporte = String.format("%s\n" + "Nombre del participante: %s\n"
-                + "Edad del participante: %d\n"
-                + "Nivel del participante: %s\n"
-                + "Ciudad del participante: %s\n"
+        reporte = String.format("%s\n" + "Participante: %s\n"
+                + "Edad: %d\n"
+                + "Nivel: %s\n"
+                + "Ciudad: %s\n"
                 + "Estilo favorito: %s\n", reporte, nombre, edad, nivel, ciudad,
                                             estilo);
         return reporte;

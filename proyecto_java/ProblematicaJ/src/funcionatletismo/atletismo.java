@@ -26,7 +26,7 @@ public class atletismo {
         System.out.println("Ingrese la edad del participante");
         edad = entrada.nextInt();
         entrada.nextLine();
-        System.out.println("Ingrese la especialidad: (Carreras, Salto,"
+        System.out.println("Ingrese la especialidad: (Carreras, Salto, "
                 + "Lanzamiento)");
         especialidad = entrada.nextLine();
         System.out.println("Ingrese la ciudad del participante");
@@ -34,10 +34,10 @@ public class atletismo {
         System.out.println("Ingrese récord personal");
         record = entrada.nextLine();
 
-        reporte = String.format("%s\n" + "Nombre del participante: %s\n"
-                + "Edad del participante: %d\n"
-                + "Especialidad del participante: %s\n"
-                + "Ciudad del participante: %s\n"
+        reporte = String.format("%s\n" + "Participante: %s\n"
+                + "Edad: %d\n"
+                + "Especialidad: %s\n"
+                + "Ciudad: %s\n"
                 + "Récord personal: %s\n", reporte, nombre, edad, especialidad, 
                                            ciudad,record);
         return reporte;

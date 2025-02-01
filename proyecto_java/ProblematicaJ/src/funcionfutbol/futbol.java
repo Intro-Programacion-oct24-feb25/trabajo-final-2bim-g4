@@ -32,10 +32,10 @@ public class futbol {
                    + "participante");
            equipo = entrada.nextLine();
            
-           reporte=String.format("%s\n"+"Nombre del participante: %s\n"
-                   + "Edad del participante: %d\n"
-                   + "Posición preferida del participante: %s\n"
-                   +"Ciudad del participante: %s\n"
+           reporte=String.format("%s\n"+"Participante: %s\n"
+                   + "Edad: %d\n"
+                   + "Posición preferida: %s\n"
+                   +"Ciudad: %s\n"
            + "Equipo favorito: %s\n",reporte, nombre,edad,posicion,ciudad,equipo);
            return reporte;
 

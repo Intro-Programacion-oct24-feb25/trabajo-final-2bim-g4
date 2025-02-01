@@ -33,11 +33,11 @@ public class ciclismo {
         System.out.println("Ingrese marca de bicicleta preferida");
         marca = entrada.nextLine();
 
-        reporte = String.format("%s\n" + "Nombre del participante: %s\n"
-                + "Edad del participante: %d\n"
+        reporte = String.format("%s\n" + "Participante: %s\n"
+                + "Edad: %d\n"
                 + "Tipo de ciclismo: %s\n"
-                + "Ciudad del participante: %s\n"
-                + "marca de bicicleta favorita: %s\n", reporte, nombre, edad, 
+                + "Ciudad: %s\n"
+                + "Marca de bicicleta favorita: %s\n", reporte, nombre, edad, 
                                                       ciclismo, ciudad,marca);
         return reporte;
     }

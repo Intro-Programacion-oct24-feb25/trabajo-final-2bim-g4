@@ -18,7 +18,7 @@ public class obtenerinformacion {
         } else if (suma >= 1 && suma <= 5) {
             mensaje = "Poca participación en el club, hay que mejorar.\n";
         } else if (suma >= 6 && suma <= 15) {
-            mensaje = "Buena participación, ¡sigue así!\n";
+            mensaje = "Buena participación, sigue así!\n";
         } else {
             mensaje = "¡Excelente campaña del club!\n";
         }

@@ -34,10 +34,10 @@ public class basquetbol {
         System.out.println("Ingrese la ciudad del participante");
         ciudad = entrada.nextLine();
 
-        reporte = String.format("%s\n" + "Nombre del participante: %s\n"
-                + "Edad del participante: %d\n"
-                + "Posición preferida del participante: %s\n"
-                + "Estatura del participante: %d\n"
+        reporte = String.format("%s\n" + "Participante: %s\n"
+                + "Edad: %d\n"
+                + "Posición preferida: %s\n"
+                + "Estatura del participante en cm: %d\n"
                 + "Ciudad: %s\n", reporte, nombre, edad, posicion, estatura, 
                                    ciudad);
         return reporte;

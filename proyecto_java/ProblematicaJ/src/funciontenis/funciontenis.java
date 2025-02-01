@@ -26,17 +26,17 @@ public class funciontenis {
         System.out.println("Ingrese la edad del participante");
         edad = entrada.nextInt();
         entrada.nextLine();
-        System.out.println("Ingrese el nivel: (Principiante, Intermedio,"
+        System.out.println("Ingrese el nivel: (Principiante, Intermedio, "
                 + "Avanzado)");
         nivel = entrada.nextLine();
         System.out.println("Ingrese la ciudad del participante");
         ciudad = entrada.nextLine();
         System.out.println("Ingrese la mano hábil: (Derecha, Izquierda)");
         mano = entrada.nextLine();
-        reporte = String.format("%s\n" + "Nombre del participante: %s\n"
-                + "Edad del participante: %d\n"
-                + "Nivel del participante: %s\n"
-                + "Ciudad del participante: %s\n"
+        reporte = String.format("%s\n" + "Participante: %s\n"
+                + "Edad: %d\n"
+                + "Nivel: %s\n"
+                + "Ciudad: %s\n"
                 + "Mano hábil: %s\n", reporte, nombre, edad, nivel, ciudad, mano);
         return reporte;
     }
