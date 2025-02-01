@@ -5,6 +5,13 @@
 package problematicaj;
 
 import java.util.Scanner;
+import static problematicaj.Procedimiento1.registrarParticipanteFutbol;
+import static problematicaj.Procedimiento2.registrarParticipanteNatacion;
+import static problematicaj.Procedimiento3.registrarParticipanteAtletismo;
+import static problematicaj.Procedimiento4.registrarParticipanteBasquetball;
+import static problematicaj.Procedimiento5.registrarParticipanteCiclismo;
+import static problematicaj.Procedimiento6.registrarParticipanteTenis;
+import static problematicaj.Procedimiento7.registrarParticipanteYoga;
 
 /**
  *
@@ -19,6 +26,7 @@ public class ProblematicaJ {
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
         int indice;
+        int sumatotal;
         String letra;
         int[] arreglo = new int[7];
         String mensajeActividades;
@@ -83,7 +91,8 @@ public class ProblematicaJ {
             }
 
         }
-        mensajeActividades = obtenerInformacion(arreglo);
+        sumatotal= obtenerSuma(arreglo);
+        mensajeActividades = obtenerInformacion(sumatotal);
         String[] nombres = {"Futbol", "Natacion", "Atletismo", "Basquetball",
             "Ciclismo", "Tenis", "Yoga"};
         cadenaReporte = obtenerReporte(nombres, arreglo);
@@ -91,7 +100,41 @@ public class ProblematicaJ {
         System.out.printf("%s\n", cadenaReporte);
 
     }
+    public static int obtenerSuma(int[] arreglo) {
+        int suma = 0;
+        for (int i = 0; i < 6; i++) {
+            suma += arreglo[i];
+        }
+        return suma;
+    }
+    public static String obtenerInformacion(int suma) {
+        String mensaje = "";
+
+        if (suma == 0) {
+            mensaje = "¡Mal compañero, debes mejorar!";
+        } else if (suma >= 1 && suma <= 5) {
+            mensaje = "Poca participación en el club, hay que mejorar.";
+        } else if (suma >= 6 && suma <= 15) {
+            mensaje = "Buena participación, ¡sigue así!";
+        } else {
+            mensaje = "¡Excelente compañero del club!";
+        }
+
+        return mensaje;
+    }
+    public static String obtenerReporte(String[] nombres, int[] actividades) {
+        String reporte = "";
+
+        for (int i = 0; i < 6; i++) {
+            reporte +=i+1+". "+"Número de participaciones de " + nombres[i] + ": " + 
+                    actividades[i] + "\n";
+        }
+
+        reporte = "Las actividades ingresadas son:\n" + reporte;
+
+        return reporte;
+    }
 
 }
 
-}
+
