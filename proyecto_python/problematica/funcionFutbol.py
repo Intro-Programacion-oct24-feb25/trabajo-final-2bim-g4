@@ -5,7 +5,12 @@ def registrarParticipanteFutbol():
     ciudad = (input("Ingrese ciudad del participante: "))
     equipo = (input("Ingrese equipo favorito del participante: "))
 
-    reporte = "Particpante: " + nombre + "\nEdad: " + edad + "\nPosicion preferida: " + posicion + "\nCiudad: " + ciudad
-    + "\nEquipo favorito: " + equipo + "\n"
+    reporte = (
+    "Participante: " + nombre 
+    + "\nEdad: " + str(edad) 
+    + "\nPosición preferida: " + posicion 
+    + "\nCiudad: " + ciudad 
+    + "\nEquipo favorito: " + equipo + "\n")
+
     return reporte
 

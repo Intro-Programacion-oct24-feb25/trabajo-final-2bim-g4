@@ -12,8 +12,8 @@ from funcionObtenerReporte import obtenerReporte
 
 
 global reporte
-reporte = ""
 def principal():
+    reporte = ""
     bandera = True
     arreglo = [0,0,0,0,0,0,0]
     while(bandera):
@@ -49,16 +49,17 @@ def principal():
                                 else:
                                     print("Lo sentimos, el club no tiene esa opcion\n")
 
-        letra = (input("Desea salir? (si)"))
+        letra = (input("Desea salir? (si): "))
         if(letra == "si"):
             bandera = False
-        sumatotal = obtenerSuma(arreglo)
-        mensajeActividades = obtenerInformacion(sumatotal)
-        nombres = ["Futbol","Natacion","Atletismo","Basquetball","Ciclismo","Tenis","Yoga"]
-        cadenaReporte = obtenerReporte(nombres, arreglo)
-        print(reporte)
-        print(mensajeActividades)
-        print(cadenaReporte)
+
+    sumatotal = obtenerSuma(arreglo)
+    mensajeActividades = obtenerInformacion(sumatotal)
+    nombres = ["Futbol","Natacion","Atletismo","Basquetball","Ciclismo","Tenis","Yoga"]
+    cadenaReporte = obtenerReporte(nombres, arreglo)
+    print(reporte)
+    print(mensajeActividades)
+    print(cadenaReporte)
 
 if __name__ == "__main__":
     principal()
