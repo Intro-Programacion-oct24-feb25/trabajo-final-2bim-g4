@@ -14,7 +14,7 @@ public class obtenereporte {
         String reporte = "Las actividades ingresadas son: \n";
 
         for (int i = 0; i < 6; i++) {
-            reporte += i + 1 + ". " + "Número de participantes de " + nombres[i] + ": "
+            reporte = reporte + i + 1 + ". " + "Número de participantes de " + nombres[i] + ": "
                     + actividades[i] + "\n";
         }
         return reporte;

@@ -1,5 +1,13 @@
-from funciones.funciones_deportes import registrarParticipanteFutbol, registrarParticipanteNatacion, registrarParticipanteAtletismo, registrarParticipanteBasquetball, registrarParticipanteCiclismo, registrarParticipanteTenis, registrarParticipanteYoga
-from funciones.funciones_calculos import obtenerSuma, obtenerInformacion, obtenerReporte
+from funcionFutbol import registrarParticipanteFutbol
+from funcionNatacion import registrarParticipanteNatacion
+from funcionAtletismo import registrarParticipanteAtletismo
+from funcionBasquetball import registrarParticipanteBasquetball
+from funcionCiclismo import registrarParticipanteCiclismo
+from funcionTenis import registrarParticipanteTenis
+from funcionYoga import registrarParticipanteYoga
+from funcionObtenerSuma import obtenerSuma
+from funcionObtenerInformacion import obtenerInformacion
+from funcionObtenerReporte import obtenerReporte
 
 
 

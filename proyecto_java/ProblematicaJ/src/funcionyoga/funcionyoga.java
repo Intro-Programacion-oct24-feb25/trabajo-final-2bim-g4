@@ -38,7 +38,7 @@ public class funcionyoga {
                 + "Edad: %d\n"
                 + "Nivel: %s\n"
                 + "Ciudad: %s\n"
-                + "Estilo favorito: %s\n", reporte, nombre, edad, nivel, ciudad,
+                + "Estilo de yoga preferido: %s\n", reporte, nombre, edad, nivel, ciudad,
                                             estilo);
         return reporte;
     }
