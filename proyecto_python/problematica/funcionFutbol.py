@@ -10,7 +10,7 @@ def registrarParticipanteFutbol():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + posicion 
     + "\nCiudad: " + ciudad 
-    + "\nEquipo favorito: " + equipo + "\n")
+    + "\nEquipo favorito: " + equipo + "\n\n")
 
     return reporte
 

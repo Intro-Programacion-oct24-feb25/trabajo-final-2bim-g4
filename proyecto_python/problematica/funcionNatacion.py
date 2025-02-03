@@ -10,6 +10,6 @@ def registrarParticipanteNatacion():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + nivel 
     + "\nCiudad: " + ciudad 
-    + "\nEstilo favorito: " + estilo + "\n")
+    + "\nEstilo favorito: " + estilo + "\n\n")
 
     return reporte

@@ -10,6 +10,6 @@ def registrarParticipanteCiclismo():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + ciclismo 
     + "\nCiudad: " + ciudad 
-    + "\nMarca favorita: " + marca + "\n")
+    + "\nMarca favorita: " + marca + "\n\n")
 
     return reporte

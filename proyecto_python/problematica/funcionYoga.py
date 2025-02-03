@@ -10,6 +10,6 @@ def registrarParticipanteYoga():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + nivel 
     + "\nCiudad: " + ciudad 
-    + "\nEstilo de yoga favorito: " + estilo + "\n")
+    + "\nEstilo de yoga favorito: " + estilo + "\n\n")
 
     return reporte

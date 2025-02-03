@@ -11,7 +11,7 @@ def registrarParticipanteBasquetball():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + posicion 
     + "\nEstatura en cm: " + str(estatura) 
-    + "\nCiudad: " + ciudad + "\n")
+    + "\nCiudad: " + ciudad + "\n\n")
 
     
     return reporte

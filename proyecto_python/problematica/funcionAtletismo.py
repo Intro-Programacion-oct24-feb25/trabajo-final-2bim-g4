@@ -10,6 +10,6 @@ def registrarParticipanteAtletismo():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + especialidad 
     + "\nCiudad: " + ciudad 
-    + "\nEstilo favorito: " + record + "\n")
+    + "\nEstilo favorito: " + record + "\n\n")
 
     return reporte

@@ -10,6 +10,6 @@ def registrarParticipanteTenis():
     + "\nEdad: " + str(edad) 
     + "\nPosición preferida: " + nivel 
     + "\nCiudad: " + ciudad 
-    + "\nEstilo favorito: " + mano + "\n")
+    + "\nEstilo favorito: " + mano + "\n\n")
 
     return reporte
