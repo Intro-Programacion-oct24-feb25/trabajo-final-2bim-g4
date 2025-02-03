@@ -12,8 +12,8 @@ package funcionobtenersuma;
 public class obtenersuma {
     public static int obtenerSuma(int[] arreglo) {
         int suma = 0;
-        for (int i = 0; i < 6; i++) {
-            suma += arreglo[i];
+        for (int i = 0; i < arreglo.length; i++) {
+            suma = suma + arreglo[i];
         }
         return suma;
     }

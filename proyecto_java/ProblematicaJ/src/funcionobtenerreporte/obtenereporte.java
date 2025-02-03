@@ -13,9 +13,9 @@ public class obtenereporte {
     public static String obtenerReporte(String[] nombres, int[] actividades) {
         String reporte = "Las actividades ingresadas son: \n";
 
-        for (int i = 0; i < 6; i++) {
-            reporte = reporte + i + 1 + ". " + "Número de participantes de " + nombres[i] + ": "
-                    + actividades[i] + "\n";
+        for (int i = 0; i < actividades.length; i++) {
+            reporte = String.format("%s%d.Numero de participantes de %s: %d\n",
+                    reporte, (i + 1), nombres[i], actividades[i]);
         }
         return reporte;
     }

@@ -40,36 +40,36 @@ public static String reporte="Reporte:\n";
                     + "Tenis(6)\nYoga(7)\n");
             indice = entrada.nextInt();
             if (indice == 1) {
-               reporte = reporte + futbol.registrarParticipanteFutbol();
+               reporte = String.format("%s%s", reporte, futbol.registrarParticipanteFutbol());
                 arreglo[0] = arreglo[0] + 1;
 
             } else {
                 if (indice == 2) {
-                  reporte = reporte + natacion.registrarParticipanteNatacion();
+                  reporte = String.format("%s%s", reporte, natacion.registrarParticipanteNatacion());
                     arreglo[1] = arreglo[1] + 1;
 
                 } else {
                     if (indice == 3) {
-                       reporte = reporte + atletismo.registrarParticipanteAtletismo();
+                       reporte = String.format("%s%s", reporte, atletismo.registrarParticipanteAtletismo());
                         arreglo[2] = arreglo[2] + 1;
 
                     } else {
                         if (indice == 4) {
-                            reporte =  reporte + basquetbol.registrarParticipanteBasquetball();
+                            reporte = String.format("%s%s", reporte, basquetbol.registrarParticipanteBasquetball());
                             arreglo[3] = arreglo[3] + 1;
                         } else {
                             if (indice == 5) {
-                                reporte =  reporte + ciclismo.registrarParticipanteCiclismo();
+                                reporte = String.format("%s%s", reporte, ciclismo.registrarParticipanteCiclismo());
                                 arreglo[4] = arreglo[4] + 1;
 
                             } else {
                                 if (indice == 6) {
-                                   reporte = reporte + funciontenis.registrarParticipanteTenis();
+                                   reporte = String.format("%s%s", reporte, funciontenis.registrarParticipanteTenis());
                                     arreglo[5] = arreglo[5] + 1;
 
                                 } else {
                                     if (indice == 7) {
-                                      reporte = reporte + funcionyoga.registrarParticipanteYoga();
+                                      reporte = String.format("%s%s", reporte, funcionyoga.registrarParticipanteYoga());
                                         arreglo[6] = arreglo[6] + 1;
 
                                     } else {
